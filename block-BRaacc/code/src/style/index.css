@@ -1,0 +1,81 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  background-color: #D1EFEF;
+}
+.text-center {
+  text-align: center;
+}
+.flex {
+  display: flex;
+}
+ul,li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+button {
+  font-size: 20px;
+  padding: 8px 16px;
+  color: sandybrown;
+  cursor: pointer;
+}
+.padding {
+  padding: 180px 0;
+}
+header {
+  background-color: #313F9E;
+  padding: 24px;
+  color: #fff;
+}
+header h1 {
+  color: #fff;
+}
+
+.sidebar {
+  background-color: #fff;
+  width: 240px;
+  padding: 8px;
+  height: 100vh;
+}
+
+
+.sidebar a {
+  display: block;
+  font-size: 20px;
+  margin: 8px;
+  padding: 12px 24px;
+}
+.sidebar a:hover {
+  background-color: #E8EDEE;
+}
+
+.wrapper-main {
+  padding: 32px;
+  width: calc(100% - 240px);
+}
+.wrapper-main ul {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+  margin-top: 32px;
+}
+.wrapper-main ul a {
+  display: block;
+  background-color: #fff;
+  padding: 40px 16px;
+  font-size: 24px;
+  border-radius: 12px;
+}
+.article-list {
+  padding: 32px;
+}
+.article-list li {
+  margin: 12px 0;
+}
