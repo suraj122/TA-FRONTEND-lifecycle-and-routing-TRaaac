@@ -30,6 +30,9 @@ class PopularRepos extends React.Component {
 
   render() {
     let navigations = ["All", "JavaScript", "Ruby", "Java", "CSS", "Python"];
+    if (!this.state.data) {
+      return <h1>Loading ...</h1>;
+    }
     return (
       <div>
         <header>
@@ -48,23 +51,19 @@ class PopularRepos extends React.Component {
           </nav>
         </header>
         <ul className="repo-list">
-          {!this.state.data ? (
-            <h2>Loading...</h2>
-          ) : (
-            this.state.data.items.map((repo, i) => (
-              <li key={repo.id}>
-                <div className="text-center">
-                  <h4>#{i + 1}</h4>
-                  <img src={repo.owner.avatar_url} alt="" />
-                  <h2>{repo.name}</h2>
-                </div>
+          {this.state.data.items.map((repo, i) => (
+            <li key={repo.id}>
+              <div className="text-center">
+                <h4>#{i + 1}</h4>
+                <img src={repo.owner.avatar_url} alt="" />
+                <h2>{repo.name}</h2>
+              </div>
 
-                <h5>{repo.stargazers_count}</h5>
-                <h5>{repo.forks}</h5>
-                <h5>{repo.open_issues}</h5>
-              </li>
-            ))
-          )}
+              <h5>{repo.stargazers_count}</h5>
+              <h5>{repo.forks}</h5>
+              <h5>{repo.open_issues}</h5>
+            </li>
+          ))}
         </ul>
       </div>
     );
