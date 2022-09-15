@@ -14,8 +14,8 @@ root.render(
     <Header />
     <Routes>
       <Route path="/" element={<App />} />
-      <Route path="battle" element={<Battle />} />
-      <Route path="result/:playerOne&&playerTwo" element={<Result />} />
+      <Route path="/battle" element={<Battle />} />
+      <Route path="/battle/result/:player" element={<Result />} />
     </Routes>
   </BrowserRouter>
 );

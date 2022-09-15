@@ -46,8 +46,6 @@ class Battle extends React.Component {
   };
 
   render() {
-    console.log(this.state.playerOneData);
-    console.log(this.state.playerTwoData);
     return (
       <div>
         <header className="text-center">
@@ -99,7 +97,7 @@ class Battle extends React.Component {
           {this.state.playerOneIsvisible && this.state.playerTwoIsvisible ? (
             <div className="text-center">
               <Link
-                to={`/result/${this.state.playerOne}&&${this.state.playerTwo}`}
+                to={`/battle/result/${this.state.playerOne}&&${this.state.playerTwo}`}
               >
                 <button>Battle</button>
               </Link>
@@ -108,7 +106,6 @@ class Battle extends React.Component {
             ""
           )}
         </div>
-        <Outlet />
       </div>
     );
   }

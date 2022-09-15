@@ -109,3 +109,12 @@ button {
   gap: 32px;
   margin-top: 24px;
 }
+.battling-players {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 32px;
+  text-align: center;
+}
+.battling-players img {
+  width: 280px;
+}
