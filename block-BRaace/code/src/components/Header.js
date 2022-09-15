@@ -10,7 +10,7 @@ function Header() {
         </NavLink>
       </li>
       <li>
-        <NavLink activeclassname="active" className="nav-item" to="/about">
+        <NavLink activeclassname="active" className="nav-item" to="/battle">
           Battle
         </NavLink>
       </li>

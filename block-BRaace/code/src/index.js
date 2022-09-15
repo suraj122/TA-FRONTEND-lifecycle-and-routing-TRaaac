@@ -3,9 +3,9 @@ import { createRoot } from "react-dom/client";
 import "./style/index.css";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import App from "./components/App";
-import Contact from "./components/Contact";
-import About from "./components/About";
 import Header from "./components/Header";
+import Battle from "./components/Battle";
+import Result from "./components/Result";
 
 let root = createRoot(document.getElementById("root"));
 
@@ -14,8 +14,8 @@ root.render(
     <Header />
     <Routes>
       <Route path="/" element={<App />} />
-      <Route path="contact" element={<Contact />} />
-      <Route path="about" element={<About />} />
+      <Route path="battle" element={<Battle />} />
+      <Route path="result/:playerOne&&playerTwo" element={<Result />} />
     </Routes>
   </BrowserRouter>
 );
