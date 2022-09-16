@@ -11,9 +11,12 @@ body {
 .text-center {
   text-align: center;
 }
+.text-right {
+  text-align: right;
+}
 .flex {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
 }
 ul,li {

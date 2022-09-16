@@ -20,7 +20,6 @@ class Categories extends React.Component {
       return <h1>Loading...</h1>;
     }
     let categories = this.state.data.trivia_categories;
-    console.log(categories);
     return (
       <section>
         <header className="text-center">
@@ -30,7 +29,7 @@ class Categories extends React.Component {
         <ul className="categories">
           {categories.map((category) => (
             <li key={category.id}>
-              <Link to={`/category/${category.name}`}>{category.name}</Link>
+              <Link to={`/category=${category.id}`}>{category.name}</Link>
             </li>
           ))}
         </ul>
